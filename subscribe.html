@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSQ47FFJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8RSQ47FFJZ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilot Waitlist — New Adventures in AI-Fi</title>
+<meta name="description" content="Interested in a pilot project? Leave your details and we'll scope it together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --paper:#F6F2EA;
+    --ink:#152238;
+    --ink-soft:#4A5568;
+    --coral:#1271A5;
+    --coral-deep:#0E5A84;
+    --yellow:#FFC83D;
+    --line:#E7E1D3;
+    --radius:14px;
+    --wrap:1120px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Arimo', sans-serif;
+    line-height:1.05;
+    letter-spacing:-0.045em;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 28px;}
+  section{padding:96px 0;}
+  @media(max-width:720px){ section{padding:64px 0;} }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 26px; border-radius:999px;
+    font-weight:600; font-size:15px;
+    border:1.5px solid var(--ink);
+    transition:transform .18s ease, background .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  .btn-solid{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .btn-solid:hover{ background:var(--coral-deep); border-color:var(--coral-deep); transform:translateY(-2px); }
+  .btn-ghost{ background:transparent; color:var(--ink); }
+  .btn-ghost:hover{ background:var(--ink); color:#fff; transform:translateY(-2px); }
+  .btn-coral{ background:var(--coral); color:#fff; border-color:var(--coral); }
+  .btn-coral:hover{ background:var(--coral-deep); border-color:var(--coral-deep); transform:translateY(-2px); }
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo-mark{ display:flex; align-items:center; }
+  .logo-mark svg{ height:42px; width:auto; display:block; }
+  .foot-brand .logo-mark svg{ height:96px; }
+  .nav-links{ display:flex; gap:32px; font-size:15px; font-weight:500; }
+  .nav-links a{ opacity:.8; transition:opacity .15s; }
+  .nav-links a:hover{ opacity:1; }
+  .nav-cta{ display:flex; align-items:center; gap:18px; }
+  .nav-toggle{ display:none; background:none; border:none; cursor:pointer; }
+  @media(max-width:860px){
+    .nav-links{ display:none; }
+    .nav-toggle{ display:block; }
+  }
+
+  /* HERO (reused pattern, shorter) */
+  .hero{ padding:110px 0 40px; position:relative; overflow:hidden; }
+  .eyebrow{ font-size:12.5px; color:var(--coral-deep); font-weight:600; margin-bottom:22px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{ content:''; width:24px; height:2px; background:var(--coral); display:inline-block; }
+  .hero h1{ font-size:clamp(38px, 6.5vw, 64px); max-width:760px; letter-spacing:-0.05em; }
+  .hero h1 .hl{ position:relative; white-space:nowrap; }
+  .hero h1 .hl::after{
+    content:''; position:absolute; left:0; right:0; bottom:4px; height:.32em;
+    background:var(--yellow); z-index:-1; opacity:.55;
+  }
+  .hero p.lead{ font-size:19px; color:var(--ink-soft); max-width:560px; margin:22px 0 0; }
+
+  /* SUBSCRIBE PANEL */
+  .sub-panel{
+    max-width:640px;
+    margin:48px 0 0;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .sub-panel .frame-wrap{
+    background:#fff;
+  }
+  .sub-panel iframe{
+    width:100%;
+    border:none;
+    display:block;
+    min-height:420px;
+  }
+  .sub-note{
+    margin-top:20px; font-size:13.5px; color:var(--ink-soft); max-width:560px;
+  }
+
+  /* FOOTER */
+  footer{ padding:56px 0 40px; border-top:1px solid var(--line); }
+  .foot-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; }
+  .foot-brand p{ max-width:320px; color:var(--ink-soft); font-size:14px; margin-top:14px; }
+  .foot-links{ display:flex; gap:60px; flex-wrap:wrap; }
+  .foot-links h4{ font-size:12.5px; color:var(--ink-soft); margin-bottom:14px; font-weight:600; }
+  .foot-links a{ display:block; font-size:14.5px; margin-bottom:10px; opacity:.85; }
+  .foot-links a:hover{ opacity:1; color:var(--coral-deep); }
+  .foot-bottom{ margin-top:48px; padding-top:24px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html#top" class="logo-mark" aria-label="New Adventures in AI-Fi">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544.17 252.12" width="544" height="252">
+<g fill="#152238">
+<g transform="translate(10.00,82.42) scale(0.039062,-0.039062)"><path d="M399 831V0H137V1409H474L1097 315Q1079 467 1079 590V1409H1341V0H995L381 1085Q390 1006 394.5 942.5Q399 879 399 831Z"/></g>
+<g transform="translate(64.77,82.42) scale(0.039062,-0.039062)"><path d="M1286 228V0H137V1409H1245V1181H432V827H1184V599H432V228Z"/></g>
+<g transform="translate(115.13,82.42) scale(0.039062,-0.039062)"><path d="M909 834 715 0H365L2 1409H301L497 546Q510 491 525.5 419.0Q541 347 551 279Q561 326 569.5 370.5Q578 415 587.0 458.5Q596 502 606 545L805 1409H1135L1332 576Q1342 534 1356.5 454.0Q1371 374 1384 279Q1397 337 1407.5 381.5Q1418 426 1428.5 470.5Q1439 515 1451 572L1632 1409H1931L1567 0H1217L1026 815Q1009 887 994.0 962.0Q979 1037 967 1116Q959 1073 947.0 1015.0Q935 957 924.5 907.0Q914 857 909 834Z"/></g>
+</g>
+<g fill="#152238">
+<g transform="translate(10.00,153.80) scale(0.039062,-0.039062)"><path d="M471 360 346 0H51L565 1409H913L1425 0H1133L1008 360ZM739 1192Q729 1152 711.0 1096.0Q693 1040 685 1017L537 582H942L790 1026Q776 1067 764.0 1109.0Q752 1151 739 1192Z"/></g>
+<g transform="translate(64.77,153.80) scale(0.039062,-0.039062)"><path d="M1393 715Q1393 489 1305.5 329.0Q1218 169 1063.5 84.5Q909 0 707 0H137V1409H647Q1003 1409 1198.0 1229.5Q1393 1050 1393 715ZM1096 715Q1096 942 978.0 1061.5Q860 1181 641 1181H432V228H682Q809 228 901.5 287.5Q994 347 1045.0 456.0Q1096 565 1096 715Z"/></g>
+<g transform="translate(119.55,153.80) scale(0.039062,-0.039062)"><path d="M1352 1409 834 0H535L14 1409H322L612 504Q626 460 644.5 393.5Q663 327 686 238Q719 363 733.5 419.0Q748 475 758 504L1047 1409Z"/></g>
+<g transform="translate(169.91,153.80) scale(0.039062,-0.039062)"><path d="M1286 228V0H137V1409H1245V1181H432V827H1184V599H432V228Z"/></g>
+<g transform="translate(220.27,153.80) scale(0.039062,-0.039062)"><path d="M399 831V0H137V1409H474L1097 315Q1079 467 1079 590V1409H1341V0H995L381 1085Q390 1006 394.5 942.5Q399 879 399 831Z"/></g>
+<g transform="translate(275.04,153.80) scale(0.039062,-0.039062)"><path d="M773 1181V0H478V1181H23V1409H1229V1181Z"/></g>
+<g transform="translate(320.91,153.80) scale(0.039062,-0.039062)"><path d="M723 -20Q529 -20 395.0 43.5Q261 107 192.0 229.5Q123 352 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 365 1279.5 239.0Q1205 113 1064.0 46.5Q923 -20 723 -20Z"/></g>
+<g transform="translate(375.68,153.80) scale(0.039062,-0.039062)"><path d="M432 535V0H137V1409H841Q1093 1409 1230.0 1300.5Q1367 1192 1367 989Q1367 841 1283.0 733.5Q1199 626 1056 592L1437 0H1105L778 535ZM1070 977Q1070 1078 1005.0 1129.0Q940 1180 810 1180H432V764H818Q942 764 1006.0 820.0Q1070 876 1070 977Z"/></g>
+<g transform="translate(430.45,153.80) scale(0.039062,-0.039062)"><path d="M1286 228V0H137V1409H1245V1181H432V827H1184V599H432V228Z"/></g>
+<g transform="translate(480.81,153.80) scale(0.039062,-0.039062)"><path d="M1286 406Q1286 199 1132.5 89.5Q979 -20 682 -20Q147 -20 59 367L344 414Q373 302 457.0 251.5Q541 201 690 201Q845 201 922.0 248.0Q999 295 999 389Q999 449 964.0 488.0Q929 527 864 553Q832 566 770.0 581.5Q708 597 616 616Q510 641 450.0 658.5Q390 676 354.0 692.5Q318 709 284 729Q209 774 167.0 849.0Q125 924 125 1036Q125 1227 268.5 1328.5Q412 1430 686 1430Q948 1430 1079.5 1348.0Q1211 1266 1249 1077L963 1038Q941 1129 873.5 1175.0Q806 1221 680 1221Q546 1221 479.0 1179.0Q412 1137 412 1053Q412 998 440.5 963.0Q469 928 525 903Q578 879 752 842Q853 820 926.0 800.5Q999 781 1043 763Q1087 744 1121.5 723.0Q1156 702 1181 678Q1232 629 1259.0 561.5Q1286 494 1286 406Z"/></g>
+</g>
+<g fill="#1271A5">
+<g transform="translate(10.00,225.17) scale(0.039062,-0.039062)"><path d="M432 1409V0H137V1409Z"/></g>
+<g transform="translate(29.23,225.17) scale(0.039062,-0.039062)"><path d="M399 831V0H137V1409H474L1097 315Q1079 467 1079 590V1409H1341V0H995L381 1085Q390 1006 394.5 942.5Q399 879 399 831Z"/></g>
+<g transform="translate(84.00,225.17) scale(0.039062,-0.039062)"><path d=""/></g>
+<g transform="translate(103.23,225.17) scale(0.039062,-0.039062)"><path d="M471 360 346 0H51L565 1409H913L1425 0H1133L1008 360ZM739 1192Q729 1152 711.0 1096.0Q693 1040 685 1017L537 582H942L790 1026Q776 1067 764.0 1109.0Q752 1151 739 1192Z"/></g>
+<g transform="translate(158.00,225.17) scale(0.039062,-0.039062)"><path d="M432 1409V0H137V1409Z"/></g>
+<g transform="translate(177.23,225.17) scale(0.039062,-0.039062)"><path d="M600 653V409H80V653Z"/></g>
+<g transform="translate(200.87,225.17) scale(0.039062,-0.039062)"><path d="M432 517V0H137V1409H1176V1181H432V745H1153V517Z"/></g>
+<g transform="translate(246.73,225.17) scale(0.039062,-0.039062)"><path d="M432 1409V0H137V1409Z"/></g>
+</g>
+</svg>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#build">What we build</a>
+        <a href="index.html#work">How we work</a>
+        <a href="index.html#cases">Case studies</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="subscribe.html">Pilot waitlist</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-solid" href="https://calendly.com/serena-manzoli/introductory-call" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow mono">Pilot waitlist</div>
+      <h1>Interested in a <span class="hl">pilot project?</span></h1>
+      <p class="lead">If you have a process that needs automating, or two tools that should be connected but aren't, leave your email and we can scope it together. No cost, no obligation.</p>
+
+      <div class="sub-panel">
+        <div class="frame-wrap">
+          <!--
+            Replace AIRTABLE_FORM_URL below with the shareable link from your
+            Airtable Form view (Table > + next to views > Form > Share > copy link).
+            It will look like: https://airtable.com/appIwXqCuwDDk5Pw7/shr XXXXXXXXXXXXXX
+          -->
+          <iframe
+            src="AIRTABLE_FORM_URL"
+            title="Subscribe form"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <p class="sub-note">Leave your name and email and I'll get in touch to discuss what you need. Nothing shared, nothing sold.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html#top" class="logo-mark" aria-label="New Adventures in AI-Fi">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544.17 252.12" width="544" height="252">
+<g fill="#152238">
+<g transform="translate(10.00,82.42) scale(0.039062,-0.039062)"><path d="M399 831V0H137V1409H474L1097 315Q1079 467 1079 590V1409H1341V0H995L381 1085Q390 1006 394.5 942.5Q399 879 399 831Z"/></g>
+<g transform="translate(64.77,82.42) scale(0.039062,-0.039062)"><path d="M1286 228V0H137V1409H1245V1181H432V827H1184V599H432V228Z"/></g>
+<g transform="translate(115.13,82.42) scale(0.039062,-0.039062)"><path d="M909 834 715 0H365L2 1409H301L497 546Q510 491 525.5 419.0Q541 347 551 279Q561 326 569.5 370.5Q578 415 587.0 458.5Q596 502 606 545L805 1409H1135L1332 576Q1342 534 1356.5 454.0Q1371 374 1384 279Q1397 337 1407.5 381.5Q1418 426 1428.5 470.5Q1439 515 1451 572L1632 1409H1931L1567 0H1217L1026 815Q1009 887 994.0 962.0Q979 1037 967 1116Q959 1073 947.0 1015.0Q935 957 924.5 907.0Q914 857 909 834Z"/></g>
+</g>
+<g fill="#152238">
+<g transform="translate(10.00,153.80) scale(0.039062,-0.039062)"><path d="M471 360 346 0H51L565 1409H913L1425 0H1133L1008 360ZM739 1192Q729 1152 711.0 1096.0Q693 1040 685 1017L537 582H942L790 1026Q776 1067 764.0 1109.0Q752 1151 739 1192Z"/></g>
+<g transform="translate(64.77,153.80) scale(0.039062,-0.039062)"><path d="M1393 715Q1393 489 1305.5 329.0Q1218 169 1063.5 84.5Q909 0 707 0H137V1409H647Q1003 1409 1198.0 1229.5Q1393 1050 1393 715ZM1096 715Q1096 942 978.0 1061.5Q860 1181 641 1181H432V228H682Q809 228 901.5 287.5Q994 347 1045.0 456.0Q1096 565 1096 715Z"/></g>
+<g transform="translate(119.55,153.80) scale(0.039062,-0.039062)"><path d="M1352 1409 834 0H535L14 1409H322L612 504Q626 460 644.5 393.5Q663 327 686 238Q719 363 733.5 419.0Q748 475 758 504L1047 1409Z"/></g>
+<g transform="translate(169.91,153.80) scale(0.039062,-0.039062)"><path d="M1286 228V0H137V1409H1245V1181H432V827H1184V599H432V228Z"/></g>
+<g transform="translate(220.27,153.80) scale(0.039062,-0.039062)"><path d="M399 831V0H137V1409H474L1097 315Q1079 467 1079 590V1409H1341V0H995L381 1085Q390 1006 394.5 942.5Q399 879 399 831Z"/></g>
+<g transform="translate(275.04,153.80) scale(0.039062,-0.039062)"><path d="M773 1181V0H478V1181H23V1409H1229V1181Z"/></g>
+<g transform="translate(320.91,153.80) scale(0.039062,-0.039062)"><path d="M723 -20Q529 -20 395.0 43.5Q261 107 192.0 229.5Q123 352 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 365 1279.5 239.0Q1205 113 1064.0 46.5Q923 -20 723 -20Z"/></g>
+<g transform="translate(375.68,153.80) scale(0.039062,-0.039062)"><path d="M432 535V0H137V1409H841Q1093 1409 1230.0 1300.5Q1367 1192 1367 989Q1367 841 1283.0 733.5Q1199 626 1056 592L1437 0H1105L778 535ZM1070 977Q1070 1078 1005.0 1129.0Q940 1180 810 1180H432V764H818Q942 764 1006.0 820.0Q1070 876 1070 977Z"/></g>
+<g transform="translate(430.45,153.80) scale(0.039062,-0.039062)"><path d="M1286 228V0H137V1409H1245V1181H432V827H1184V599H432V228Z"/></g>
+<g transform="translate(480.81,153.80) scale(0.039062,-0.039062)"><path d="M1286 406Q1286 199 1132.5 89.5Q979 -20 682 -20Q147 -20 59 367L344 414Q373 302 457.0 251.5Q541 201 690 201Q845 201 922.0 248.0Q999 295 999 389Q999 449 964.0 488.0Q929 527 864 553Q832 566 770.0 581.5Q708 597 616 616Q510 641 450.0 658.5Q390 676 354.0 692.5Q318 709 284 729Q209 774 167.0 849.0Q125 924 125 1036Q125 1227 268.5 1328.5Q412 1430 686 1430Q948 1430 1079.5 1348.0Q1211 1266 1249 1077L963 1038Q941 1129 873.5 1175.0Q806 1221 680 1221Q546 1221 479.0 1179.0Q412 1137 412 1053Q412 998 440.5 963.0Q469 928 525 903Q578 879 752 842Q853 820 926.0 800.5Q999 781 1043 763Q1087 744 1121.5 723.0Q1156 702 1181 678Q1232 629 1259.0 561.5Q1286 494 1286 406Z"/></g>
+</g>
+<g fill="#1271A5">
+<g transform="translate(10.00,225.17) scale(0.039062,-0.039062)"><path d="M432 1409V0H137V1409Z"/></g>
+<g transform="translate(29.23,225.17) scale(0.039062,-0.039062)"><path d="M399 831V0H137V1409H474L1097 315Q1079 467 1079 590V1409H1341V0H995L381 1085Q390 1006 394.5 942.5Q399 879 399 831Z"/></g>
+<g transform="translate(84.00,225.17) scale(0.039062,-0.039062)"><path d=""/></g>
+<g transform="translate(103.23,225.17) scale(0.039062,-0.039062)"><path d="M471 360 346 0H51L565 1409H913L1425 0H1133L1008 360ZM739 1192Q729 1152 711.0 1096.0Q693 1040 685 1017L537 582H942L790 1026Q776 1067 764.0 1109.0Q752 1151 739 1192Z"/></g>
+<g transform="translate(158.00,225.17) scale(0.039062,-0.039062)"><path d="M432 1409V0H137V1409Z"/></g>
+<g transform="translate(177.23,225.17) scale(0.039062,-0.039062)"><path d="M600 653V409H80V653Z"/></g>
+<g transform="translate(200.87,225.17) scale(0.039062,-0.039062)"><path d="M432 517V0H137V1409H1176V1181H432V745H1153V517Z"/></g>
+<g transform="translate(246.73,225.17) scale(0.039062,-0.039062)"><path d="M432 1409V0H137V1409Z"/></g>
+</g>
+</svg>
+        </a>
+        <p>Bespoke automation for lawyers, accountants, HR teams, real estate firms and small businesses. Sometimes with AI. Sometimes not.</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>EXPLORE</h4>
+          <a href="index.html#build">What we build</a>
+          <a href="index.html#work">How we work</a>
+          <a href="index.html#cases">Case studies</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="subscribe.html">Pilot waitlist</a>
+        </div>
+        <div>
+          <h4>CONNECT</h4>
+          <a href="mailto:serena@newadventuresinaifi.com">serena@newadventuresinaifi.com</a>
+          <a href="https://calendly.com/serena-manzoli/introductory-call" target="_blank" rel="noopener">Book a call</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 New Adventures in AI-Fi. All rights reserved.</span>
+      <span>Built with plain automation. And a little AI.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
